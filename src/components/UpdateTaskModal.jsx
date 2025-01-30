@@ -20,7 +20,7 @@ const UpdateTaskModal = ({
   useEffect(() => {
     const getSingleTask = async () => {
       await axios
-        .get(`http://localhost:4000/api/v1/task/single/${id}`, {
+        .get(`https://ts-backend-r7jg.onrender.com/api/v1/task/single/${id}`, {
           withCredentials: true,
         })
         .then((res) => {
@@ -54,7 +54,7 @@ const UpdateTaskModal = ({
 
     await axios
       .put(
-        `http://localhost:4000/api/v1/task/update/${id}`,
+        `https://ts-backend-r7jg.onrender.com/api/v1/task/update/${id}`,
         {
           title,
           description,
